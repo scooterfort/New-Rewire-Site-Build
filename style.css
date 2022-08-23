@@ -139,12 +139,11 @@ html {
     right: 20px;
     width: 60px;
     height: 60px;
-    background: rgba(40, 40, 40, 0.9);
+    background: var(--nu-grey);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #toggle::before {
@@ -152,7 +151,7 @@ html {
     position: absolute;
     width: 28px;
     height: 2px;
-    background: white;
+    background: var(--cream);
     transform: translateY(-5px);
     transition: 0.2s;
 }
@@ -162,7 +161,7 @@ html {
     position: absolute;
     width: 28px;
     height: 2px;
-    background: white;
+    background: var(--cream);
     transform: translateY(5px);
     transition: 0.2s;
 }
@@ -181,7 +180,8 @@ html {
     left: -300px;
     width: 300px;
     height: 100vh;
-    background: rgba(40, 40, 40, 0.9);
+    /* background: rgba(40, 40, 40, 0.9); */
+    background: var(--nu-black);
     transition: 0.5s;
 }
 
@@ -199,16 +199,17 @@ html {
     display: inline-block;
     width: 100%;
     padding: 10px 40px;
+    text-transform: uppercase;
 }
 
 #sidebar ul li:hover {
-    background: rgb(119, 119, 119);
+    background: var(--nu-grey);
 }
 
 #sidebar ul li a {
-    color: white;
+    color: var(--cream);
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 
@@ -339,31 +340,35 @@ header i {
     justify-content: space-around;
 }
 
+
 .hero-text h1 {
     font-size: 10rem;
     margin-bottom: 5px;
     text-transform: capitalize;
-    font-family: 'Kanit', sans-serif;
+    /* font-family: 'Kanit', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
     color: var(--cream);
 
 }
 
 
 .hero-text h5 {
-    color: rgba(255, 255, 255, 0.781);
+
     font-size: 3rem;
-    font-family: 'Kanit', sans-serif;
+    /* font-family: 'Kanit', sans-serif; */
+    font-family: 'Montserrat Black', sans-serif;
     margin-bottom: 60px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--cream);
+    color: #e3e2dfc4;
+    ;
 }
 
 
 .hero-text button {
     position: relative;
-    font-family: 'Poppins', sans-serif;
-
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Montserrat Thin', sans-serif;
     text-decoration: none;
     padding: 10px 30px;
     border-radius: 30px;
@@ -383,11 +388,63 @@ header i {
     background-color: var(--nu-red);
     color: var(--cream);
     cursor: pointer;
+    transition: ease;
+}
+
+
+.hero-text p {
+    color: var(--cream);
+    font-family: 'Montserrat Black', sans-serif;
+    letter-spacing: .2rem;
+    margin-bottom: 2rem;
+    transform: rotate(90deg);
+    transition: ease;
+}
+
+.hero-text i {
+    color: var(--cream);
+}
+
+.scroll-icon {
+    transform: translateY(145px);
+    transition: ease;
+    animation: scroll-icon 2s ease-in-out infinite;
+    position: absolute;
+    top: 590px;
+    right: 1px;
+
+}
+
+@keyframes scroll-icon {
+    0% {
+        opacity: 50%;
+        transform: translateY(135px);
+    }
+
+    50% {
+        opacity: 100%;
+        transform: translateY(145px);
+    }
+
+    100% {
+        opacity: 50%;
+        transform: translateY(135px);
+    }
 }
 
 
 
-@media screen and (max-width: 1240px) {}
+
+@media screen and (max-width: 1500px) {
+    .hero-text h1 {
+        font-size: 6rem;
+    }
+
+    .hero-text h5 {
+        font-size: 1.8rem;
+    }
+
+}
 
 @media screen and (max-width: 1172px) {
     .hero-text h1 {
@@ -436,7 +493,7 @@ header i {
 
 
 #about {
-    width: 100%;
+    max-width: 100%;
     height: 100vh;
     background-color: var(--cream);
     background-image: url("img/Scooter_about.png");
@@ -446,6 +503,7 @@ header i {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-attachment: fixed;
 }
 
 .about {
@@ -471,7 +529,7 @@ header i {
     height: 500px;
     max-width: 95%;
     margin: 0 auto;
-    margin-right: 350px;
+    margin-right: 250px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -506,25 +564,19 @@ header i {
     font-size: 4rem;
     margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: 'Kanit', sans-serif;
+    /* font-family: 'Kanit', sans-serif; */
+    font-family: 'Montserrat Black', sans-serif;
     color: var(--cream);
 
 }
 
-.about-text a {
-    font-family: 'Poppins', sans-serif;
-    color: var(--cream);
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    letter-spacing: 1px;
-    margin-bottom: 45px;
-}
 
 .about-text h2 {
     font-size: 2rem;
     margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: 'Kanit', sans-serif;
+    /* font-family: 'Kanit', sans-serif; */
+    font-family: 'Montserrat Black', sans-serif;
     color: var(--cream);
 
 }
@@ -532,14 +584,16 @@ header i {
 .about-text h5 {
     color: var(--dark-red);
     font-size: 1.5rem;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Montserrat Black', sans-serif;
     margin-bottom: 25px;
     text-transform: capitalize;
     letter-spacing: 1px;
 }
 
 .about-text p {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Montserrat Black', sans-serif;
     color: var(--cream);
     font-size: 1.5rem;
     line-height: 1.5rem;
@@ -550,27 +604,34 @@ header i {
 
 .about-text button {
     position: relative;
-    font-family: 'Poppins', sans-serif;
-    background: var(--dark-red);
-    color: var(--cream);
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Montserrat Thin', sans-serif;
     text-decoration: none;
     padding: 10px 30px;
     border-radius: 30px;
-    border: solid transparent;
+
     font-size: 1.5rem;
     transition: all 0.3s ease;
-    margin-bottom: 10%;
+
+    color: var(--cream);
+    background-color: transparent;
+    border: solid var(--nu-red);
 }
 
 
 .about-text button:hover {
+    border: solid var(--nu-red);
+    background-color: var(--nu-red);
     color: var(--cream);
-    background-color: transparent;
-    border: solid var(--cream);
     cursor: pointer;
 }
 
 @media screen and (max-width: 1240px) {
+    .about-content {
+        width: 100%;
+        max-width: 60%;
+        margin: 0 auto;
+    }
 
     .about {
         width: 100%;
@@ -596,18 +657,31 @@ header i {
         margin-bottom: 5px;
         max-width: 40%;
     }
+
+    .about-content {
+        width: 100%;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
 }
 
 
 
 @media screen and (max-width: 650px) {
+
     .about-content {
         width: 100%;
         max-width: 80%;
+        margin: 0 auto;
     }
 
     .about h1 {
         font-size: 3rem;
+    }
+
+    .about-text button {
+        max-width: 55%;
     }
 
     .about .about-content img {
@@ -625,7 +699,7 @@ header i {
 /*-------------------*/
 
 .work {
-    background-color: var(--dark-cream);
+    background-color: var(--nu-black);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -657,12 +731,12 @@ header i {
     padding: 0 10px;
 }
 
-.work-text h1 {
+.work h1 {
     font-size: 4rem;
     margin-bottom: 25px;
     text-transform: capitalize;
-    font-family: 'Kanit', sans-serif;
-    color: var(--dark-pink);
+    font-family: 'Montserrat Black', sans-serif;
+    color: var(--cream);
 
 }
 
@@ -727,7 +801,8 @@ button:focus {
     align-items: center;
     text-align: center;
     overflow-x: hidden;
-    font-family: 'Kanit', sans-serif;
+    /* font-family: 'Kanit', sans-serif; */
+    font-family: 'Montserrat Black', sans-serif;
 
 }
 
@@ -761,7 +836,7 @@ button:focus {
 }
 
 .form-input:focus::placeholder {
-    color: var(--dark-pink);
+    color: var(--nu-red);
     opacity: 0.85;
 }
 
@@ -827,17 +902,17 @@ button:focus {
     margin-top: 10px;
     margin-bottom: 50px;
     text-transform: uppercase;
-    font-family: 'Kanit', sans-serif;
-    color: var(--dark-pink);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--nu-black);
 }
 
 
 .form-button {
-    background-color: var(--dark-pink);
+    background-color: var(--nu-red);
     color: var(--cream);
     padding: 1em 2em;
     font-size: 1.5rem;
-    border: solid var(--dark-pink);
+    border: solid var(--nu-red);
     transition: all 0.3s ease;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -845,9 +920,9 @@ button:focus {
 }
 
 .form-button:hover {
-    color: var(--dark-pink);
+    color: var(--nu-red);
     background-color: var(--cream);
-    border: solid var(--dark-pink);
+    border: solid var(--nu-red);
     cursor: pointer;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -885,11 +960,11 @@ button:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-#footerLogoStevePerrino {
-    color: rgba(0, 0, 0, 0.5);
+#footerLogoScooterAllen {
+    color: var(--nu-black);
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -899,13 +974,13 @@ button:focus {
 
 
 .social__icon--link {
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--nu-black);
     font-size: 2rem;
     transition: all 0.3s ease;
 }
 
 .social__icon--link:hover {
-    color: var(--dark-pink);
+    color: var(--nu-red);
 }
 
 .social__media {
@@ -932,7 +1007,7 @@ button:focus {
 }
 
 .website__rights {
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--nu-black);
 
 }
 

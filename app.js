@@ -9,12 +9,12 @@ window.addEventListener("scroll", function () {
 //PARALLAX END
 
 //PARALLAX ABOUT
-const parallax_abt = document.getElementById("about");
+// const parallax_abt = document.getElementById("about");
 
-window.addEventListener("scroll", function () {
-    let offset_abt = window.pageYOffset + 2200;
-    parallax_abt.style.backgroundPositionY = offset_abt * 0.6 + "px";
-})
+// window.addEventListener("scroll", function () {
+//     let offset_abt = window.pageYOffset;
+//     parallax_abt.style.backgroundPositionY = offset_abt * 0.6 + "px";
+// })
 //PARALLAX END
 
 // NAV

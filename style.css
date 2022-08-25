@@ -737,6 +737,7 @@ header i {
     text-transform: capitalize;
     font-family: 'Montserrat Black', sans-serif;
     color: var(--cream);
+    padding-bottom: 50px;
 
 }
 
@@ -776,6 +777,186 @@ header i {
     }
 }
 
+/*-------------------------*/
+/* DISCOGRAPHY SECTION     */
+/*-------------------------*/
+
+.DISCOGRAPHY {
+    background-color: var(--nu-black);
+    text-align: center;
+    padding-bottom: 200px;
+    padding-top: 30px;
+}
+
+
+.disc-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+}
+
+.disc-container h1 {
+    font-size: 4rem;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    font-family: 'Montserrat Black', sans-serif;
+    color: var(--cream);
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.row {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+
+    flex-wrap: wrap;
+
+
+}
+
+.image {
+    background: var(--nu-black);
+    position: relative;
+    flex: auto;
+
+    max-width: 350px;
+    height: 350px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.image img {
+    opacity: 1;
+    position: relative;
+    vertical-align: top;
+    transition: 0.6s;
+    transition-property: opacity;
+}
+
+.image:hover img {
+    opacity: 0.2;
+}
+
+.image .details {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.image .details h2 {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0;
+    transition: 0.6s;
+    transition-property: opacity, transform;
+}
+
+.image .details h2 {
+    font-weight: 900;
+}
+
+.image:hover .details h2 {
+    transform: translateY(-30px);
+    opacity: 1;
+}
+
+.image .details p {
+    margin: 30px 30px 0 30px;
+    font-family: 'Montserrat Black', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s;
+    transition-property: opacity, transform;
+}
+
+.image:hover .details p {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.more {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    bottom: -60px;
+    transition: 0.6s;
+    transition-property: bottom;
+}
+
+.more a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.image:hover .more {
+    bottom: 0;
+}
+
+.more .read-more {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+
+.more .read-more span {
+    font-weight: 900;
+}
+
+.more .icon-links i {
+    color: #000;
+    font-size: 20px;
+}
+
+.more .icon-links a:not(:last-child) i {
+    margin-right: 20px;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 1080px) {
+    .image {
+        flex: 100%;
+        max-width: 350px;
+        max-height: 350px;
+    }
+
+    .disc-container h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .image .details p {
+        font-size: 16px;
+    }
+
+
+
+    .more .read-more,
+    .more .icon-links a i {
+        font-size: 18px;
+    }
+}
 
 /*---------------------------*/
 /* CONTACT SECTION           */

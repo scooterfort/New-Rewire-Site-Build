@@ -8,14 +8,6 @@ window.addEventListener("scroll", function () {
 })
 //PARALLAX END
 
-//PARALLAX ABOUT
-// const parallax_abt = document.getElementById("about");
-
-// window.addEventListener("scroll", function () {
-//     let offset_abt = window.pageYOffset;
-//     parallax_abt.style.backgroundPositionY = offset_abt * 0.6 + "px";
-// })
-//PARALLAX END
 
 // NAV
 
@@ -34,3 +26,17 @@ toggle.onclick = function () {
     toggle.classList.toggle('active');
     sidebar.classList.toggle('active');
 }
+
+
+let scrollToBottom = document.querySelector("#contact-me")
+let scrollToBottom2 = document.querySelector("#scroll-to-bottom")
+let pageBottom = document.querySelector("#contact")
+
+
+scrollToBottom.addEventListener("click", function () {
+    pageBottom.scrollIntoView()
+})
+
+scrollToBottom2.addEventListener("click", function () {
+    pageBottom.scrollIntoView()
+})

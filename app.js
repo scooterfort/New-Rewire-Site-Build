@@ -9,7 +9,7 @@ window.addEventListener("scroll", function () {
 //PARALLAX END
 
 
-// NAV
+// NAV START
 
 const toggle = document.getElementById('toggle');
 const sidebar = document.getElementById('sidebar');

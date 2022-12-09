@@ -1150,4 +1150,9 @@ button:focus {
 
 }
 
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 650px) {
+
+    .footer__container {
+        margin-top: 0px;
+    }
+}
